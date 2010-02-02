@@ -35,12 +35,12 @@
  */
 LibTemperature::LibTemperature(uint8_t TempSensorType) {
 
-    Wire.begin();
-
     pinMode(16, OUTPUT);
     digitalWrite(16, LOW);  //GND pin
     pinMode(17, OUTPUT);
     digitalWrite(17, HIGH); //VCC pin
+
+    Wire.begin();
 }
 
 /******************************************************************************
